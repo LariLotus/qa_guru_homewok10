@@ -20,9 +20,9 @@ def open_main_page():
 
 @allure.step("Ищем репозитория {repo}")
 def search_for_repository(repo):
-        browser.element(".header-search-input").click()
-        browser.element(".header-search-input").send_keys(repo)
-        browser.element(".header-search-input").submit()
+    browser.element(".header-search-input").click()
+    browser.element(".header-search-input").send_keys(repo)
+    browser.element(".header-search-input").submit()
 
 
 @allure.step("Переходим по ссылке репозитория {repo}")
@@ -32,9 +32,9 @@ def go_to_repository(repo):
 
 @allure.step("Открываем таб Issues")
 def open_issue_tab():
-        browser.element("#issues-tab").click()
+    browser.element("#issues-tab").click()
 
 
 @allure.step("Проверяем наличие Issue с номером {number}")
 def should_see_issue_with_number(number):
-        s(by.partial_text(number)).should(be.visible)
+    browser.element(by.partial_text(number)).should(be.visible)
