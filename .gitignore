@@ -1,0 +1,5 @@
+tests/allure-results
+
+# Idea
+.idea
+/allure/
